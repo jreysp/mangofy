@@ -1,0 +1,44 @@
+
+{"list": [
+    {"name":"Levitating","artist":"Dua Lipa", "genre": "Pop"},
+    {"name":"Alors on Danse","artist":"Stromae", "genre": "Pop"},
+    {"name":"My New Swag(我的新衣）","artist":"VAVA", "genre": "Rap"},
+    {"name":"Pretty Please","artist":"Jackson Wang", "genre": "Pop"},
+    {"name":"Misery Business","artist":"Paramore", "genre": "Pop"},
+    {"name":"DWAY!","artist":"Jackson Wang", "genre": "Pop"},
+    {"name":"Sweater Weather","artist":"The Neighbourhood", "genre": "Pop"},
+    {"name":"Radioactive","artist":"Imagine Dragons", "genre": "Pop"},
+    {"name":"Rain on Me","artist":"Lady Gaga", "genre": "Pop"},
+    {"name":"Lane Boy","artist":"21 Pilots", "genre": "Pop"},
+    {"name":"21 Guns","artist":"Green Day", "genre": "Pop"},
+    {"name":"Havana","artist":"Camila Cabello", "genre": "Pop"},
+    {"name":"Stressed Out","artist":"21 Pilots", "genre": "Pop"},
+    {"name":"Centuries","artist":"Fall Out Boy", "genre": "Pop"},
+    {"name":"Break Free","artist":"Arianna Grande", "genre": "Pop"},
+
+    
+    {"name":"Traveller","artist":"Wice", "genre": "Electronic"},
+    {"name":"Deep Blue","artist":"The Midnight", "genre": "Electronic"},
+    {"name":"I Am The Program","artist":"Mega Drive", "genre": "Electronic"},
+    {"name":"Still Waiting","artist":"PrototypeRaptor", "genre": "Electronic"},
+    {"name":"Old Soul","artist":"MALO", "genre": "Electronic"},
+    {"name":"Pulse Power","artist":"Dynatron", "genre": "Electronic"},
+    {"name":"Resonance","artist":"HOME", "genre": "Electronic"},
+    {"name":"Cyberkinetic","artist":"Inexedra", "genre": "Electronic"},
+    {"name":"Paradise","artist":"Voyage", "genre": "Electronic"},
+    {"name":"Descend","artist":"Dynatron", "genre": "Electronic"},
+    {"name":"Moonbeam","artist":"Jordan Maron", "genre": "Electronic"},
+
+    
+    {"name":"Symphony No.5","artist":"Ludwig van Beethoven", "genre": "Classical"},
+    {"name":"Piano Concerto No.21 in C Major","artist":"Wolfgang Amadeus Mozart", "genre": "Classical"},
+    {"name":"Symphony No.5","artist":"Ludwig van Beethoven", "genre": "Classical"},
+    {"name":"Piano Concerto No.21 in C Major","artist":"Wolfgang Amadeus Mozart", "genre": "Classical"},
+    {"name":"Gargoyles Op.29","artist":"Lowell Liebermann", "genre": "Classical"},
+
+    {"name":"Bohemian Rhapsody","artist":"Queen", "genre": "Rock"},
+    {"name":"Highway to Hell","artist":"AC/DC", "genre": "Rock"},
+    {"name":"Enter Sandman","artist":"Metallica", "genre": "Rock"},
+    {"name":"Smoke on the Water","artist":"Deep Purple", "genre": "Rock"},
+    {"name": "Another Brick in the Wall", "artist": "Pink Floyd", "genre": "Rock"}
+    ]}

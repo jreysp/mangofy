@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+//THIS IS THE PAGE FOR LOGINS
 
 function Home() {
     return (
