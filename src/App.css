@@ -95,10 +95,22 @@ li a:hover {
 .register {
   padding-top: 10px;
   text-align:center;
-  height: 100vh;
-  min-height: 100vh;
+  height: 100%;
+  min-height:100vh;
   background-color: white;
 
+}
+
+.search {
+  padding-top: 10px;
+  height: 100%;
+  min-height:100vh;
+  background-color: white;
+
+}
+
+.center {
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

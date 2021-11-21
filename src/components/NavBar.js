@@ -5,6 +5,7 @@ function NavBar() {
     return (
         <div className="navbar">
             <img src={logo} className="logo-navbar"/>
+            <li><Link to="/search">Search</Link></li>
             <li><Link to="/register">Register</Link></li>
             <li><Link to="/">Home</Link></li>
         </div>
