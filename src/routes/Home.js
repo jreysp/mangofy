@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../logo-white.png';
+//THIS IS THE PAGE FOR LOGINS
 
 function Home() {
     return (
