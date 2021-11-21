@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Register() {
     return (
-        <div>
+        <div className="register">
             <h1>Register</h1>
         </div>
     );

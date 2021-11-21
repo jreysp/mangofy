@@ -7,14 +7,15 @@ import './App.css';
 
 function App() {
   return (
+   <div className="body">
    <BrowserRouter>
       <NavBar />
-      <img src={logo} className="logo"/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
       </Routes>
    </BrowserRouter>
+   </div>
   );
 }
 
