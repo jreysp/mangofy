@@ -142,3 +142,9 @@ li a:hover {
     transform: rotate(360deg);
   }
 }
+
+.password-icon {
+  position: absolute;
+  top: 20;
+  right: 0;
+}

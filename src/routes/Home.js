@@ -11,9 +11,9 @@ function Home() {
             
             {/*Code for inputting the Username*/}
             <div className="Username">
-            <input 
+            <input
                 id="username" 
-                placeholder="USERNAME"
+                placeholder= "USERNAME"
                 type='text'
                 style={{
                     paddingLeft: "15px",
@@ -40,7 +40,7 @@ function Home() {
                     paddingBottom: "10px",
                     fontFamily: "Mont Heavy",
                     color: "orangered",
-                    marginBottom: "20px"
+                    marginBottom: "20px",
                 }}  
             />
             </div>
@@ -55,7 +55,7 @@ function Home() {
                     fontFamily: "Mont Heavy",
                     color: "white",
                     backgroundColor: "orange",
-                    marginBottom: "10px"
+                    marginBottom: "10px",
                 }} 
             >
                 LOGIN
