@@ -28,7 +28,7 @@ function Home() {
             </div>
 
             {/*Code for inputting the Password*/}
-            <div className="Password"></div>
+            <div className="Password">
             <input 
                 id="password" 
                 placeholder="PASSWORD"
@@ -43,8 +43,7 @@ function Home() {
                     marginBottom: "20px"
                 }}  
             />
-
-            <br></br>
+            </div>
 
             {/*Code for Login button*/}
             <button
