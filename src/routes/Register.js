@@ -1,9 +1,34 @@
-import { Link } from 'react-router-dom';
+import { useRef, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext.js'
+import { Alert } from 'react-bootstrap'
 
 function Register() {
+
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const { signup } = useAuth();
+    const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate()
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+        try {
+            setError("")
+            setLoading(true)
+            await signup(emailRef.current.value, passwordRef.current.value)
+        } catch {
+            setError("Failed to create an account")
+        }
+        setLoading(false)
+
+    }
+
     return (
         <div className="register">
             <h1>Create a Mangofy Account</h1>
+            {error && <Alert variant="danger">{error}</Alert>}
 
             <div
                 style={{
@@ -19,6 +44,7 @@ function Register() {
             <input
                 id="newUser" 
                 type='text'
+                ref={emailRef} required
                 style={{
                     paddingLeft: "10px",
                     paddingRight: "280px",
@@ -46,6 +72,7 @@ function Register() {
             <input 
                 id="newPass" 
                 type='text'
+                ref = {passwordRef} required
                 style={{
                     paddingLeft: "10px",
                     paddingRight: "280px",
@@ -61,6 +88,7 @@ function Register() {
 
             {/*Code for the button to create a new account*/}
             <button
+                onClick={handleSubmit}
                 style={{
                     paddingLeft: "65px",
                     paddingRight: "65px",
