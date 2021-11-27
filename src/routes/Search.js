@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react'
 import parseSongs from '../backend/search.js'
 
 function Search() {
+
+    const [searchString, setSearchString] = useState("")
+
     return (
         <div className="search">
             <h1 className="center">Search</h1>
             <SearchBar/>
+            <h4>
+                <div className="song">
+                    <li className="song_number">#</li>
+                    <li className="song_name">Title</li>
+                    <li className="song_artist">Artist</li>
+                    <li className="song_genre">Genre</li>
+                    <div><br/></div>
+                </div>
+            </h4>
             <DisplaySongs input = {search("Pop")}/>
         </div>
     );
@@ -41,8 +54,8 @@ function SearchBar() {
     //var all_songs = search(search_term);
   
     var array = [];
-    var html_obj = <h1>Song List:</h1>;
-    array.push(html_obj);
+    /*var html_obj = <h1>Song List:</h1>;
+    array.push(html_obj);*/
     console.log(all_songs);
     //console.log(all_songs.input.length);
    for(var i = 0; i < all_songs.input.length; i++)
@@ -51,12 +64,20 @@ function SearchBar() {
     const artist = all_songs.input[i].artist;
     const genre = all_songs.input[i].genre;
      
-    var temp = <div><p>
+    /*var temp = <div><p>
       Song {i+1}:<br></br>
       {name}<br></br>
       Artist: {artist}<br></br>
       Genre: {genre}<br></br>
-      </p></div>;
+      </p></div>;*/
+
+      var temp = <div className="song">
+        <li className="song_number">{i+1}</li>
+        <li className="song_name">{name}</li>
+        <li className="song_artist">{artist}</li>
+        <li className="song_genre">{genre}</li>
+        <div><hr/></div>
+      </div>
     array.push(temp);
    }
    return array;

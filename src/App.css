@@ -75,6 +75,55 @@ li a:hover {
   color:#F15A29;
 }
 
+.search input {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-family: "Helmet";
+  color: black;
+  margin-bottom: 20px;
+  margin-left: 20px
+}
+
+.song {
+  padding: 1px;
+  width: 100%;
+}
+
+.song li {
+  float: left;
+  display: block;
+  list-style-type: none;
+}
+
+.song hr {
+  margin: 20px;
+  height: 1px;
+  border: none;
+  background-color: #F15A29
+}
+
+.song_name {
+  position: absolute;
+  left: 60px;
+}
+
+.song_number {
+  position: absolute;
+  left: 30px;
+}
+
+.song_artist {
+  position: absolute;
+  left: 360px;
+}
+
+.song_genre {
+  position: absolute;
+  right: 30px;
+}
+
 .home {
   padding-top: 10px;
   height: 100%;
