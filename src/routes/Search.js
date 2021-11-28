@@ -20,7 +20,8 @@ function Search() {
                 type="text"
                 name="search"
                 ref={searchStringRef}
-                placeholder="Search for songs"
+                placeholder="Search for songs by title, artist, or genre"
+                className="search-input"
             />
             <DisplaySongs input = {search(searchString)}/>
         </div>

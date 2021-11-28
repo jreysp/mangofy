@@ -71,7 +71,7 @@ function Register() {
             <div className="newPassword">
             <input 
                 id="newPass" 
-                type='text'
+                type='password'
                 ref = {passwordRef} required
                 style={{
                     paddingLeft: "10px",

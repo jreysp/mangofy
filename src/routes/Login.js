@@ -60,7 +60,7 @@ function Login() {
             <input 
                 id="password" 
                 placeholder="PASSWORD"
-                type='text'
+                type='password'
                 ref = {passwordRef} required
                 style={{
                     paddingLeft: "15px",

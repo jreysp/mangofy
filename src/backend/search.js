@@ -19,7 +19,10 @@ export default class parseSongs
         {
             //go through all the songs and see if it's there
             var cur_song = all_songs.list[i];
-            if(cur_song.name.toLowerCase().search(name.toLowerCase()) !== -1 && name !== "")
+            var found_string = cur_song.name.toLowerCase().search(name.toLowerCase());
+            if(found_string !== -1
+                && name !== ""
+                && (found_string === 0 || cur_song.name[found_string-1] === ' '))
             {
                 //we found the song
                 //display the info ... 
@@ -43,7 +46,10 @@ export default class parseSongs
         {
             //go through all the songs and see if it's there
             var cur_song = all_songs.list[i];
-            if(cur_song.artist.toLowerCase().search(artist.toLowerCase()) !== -1 && artist !== "")
+            var found_string = cur_song.artist.toLowerCase().search(artist.toLowerCase());
+            if(found_string !== -1
+                && artist !== ""
+                && (found_string === 0 || cur_song.artist[found_string-1] === ' '))
             {
                 //we found the song
                 //display the info ... 
@@ -67,7 +73,10 @@ export default class parseSongs
         {
             //go through all the songs and see if it's there
             var cur_song = all_songs.list[i];
-            if(cur_song.genre.toLowerCase().search(genre.toLowerCase()) !== -1 && genre !== "")
+            var found_string = cur_song.genre.toLowerCase().search(genre.toLowerCase());
+            if(found_string !== -1
+                && genre !== ""
+                && (found_string === 0 || cur_song.genre[found_string-1] === ' '))
             {
                 //we found the song
                 //display the info ... 
