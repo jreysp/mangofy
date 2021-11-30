@@ -125,7 +125,12 @@ li a:hover {
 
 .song_name {
   position: absolute;
-  left: 60px;
+  left: 90px;
+}
+
+.like_button {
+  position: absolute;
+  left: 45px; 
 }
 
 .song_number {

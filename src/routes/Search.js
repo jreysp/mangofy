@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react'
 import parseSongs from '../backend/search.js'
 import app from '../firebase.js';
-import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+import LikeButton from '../components/LikeButton.js'
 
 function Search() {
   const [songs, setSongs] = useState([]);
+  const searchStringRef = useRef()
+  const [searchString, setSearchString] = useState("")
 
   useEffect(() => {
     app.firestore().collection('songs').get().then((snapshot) => {
@@ -16,10 +17,8 @@ function Search() {
     app.firestore().collection('songs').onSnapshot((snapshot) => {
       setSongs(snapshot.docs.map((doc) => doc.data()));
     });
-  }, []);
 
-    const searchStringRef = useRef()
-    const [searchString, setSearchString] = useState("")
+  }, []);
 
     function handleOnChange() {
         setSearchString(searchStringRef.current.value)
@@ -51,6 +50,10 @@ function Search() {
   }
   function DisplaySongs(all_songs)//all_songs
   {
+
+    function likeSong() {
+        return;
+    }
     //var search_term = document.getElementById('searchbar').value;
     //var all_songs = search(search_term);
   
@@ -78,6 +81,9 @@ function Search() {
 
       var temp = <div className="song">
         <li className="song_number">{i+1}</li>
+        <li className="like_button">
+            <LikeButton/>
+            </li>
         <li className="song_name">{name}</li>
         <li className="song_artist">{artist}</li>
         <li className="song_genre">{genre}</li>
