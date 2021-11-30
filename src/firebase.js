@@ -16,5 +16,14 @@ const app = firebase.initializeApp({
 
 var db = firebase.firestore();
 
+export const createUser = async (email, password) => {
+    const userAuth = await auth.createUserWithEmailAndPassword(email, password);
+    app.firestore().collection('users').doc(userAuth.user.uid).set({
+        Email: email,
+        Playlist:[],
+    });
+    
+}
+
 export const auth = app.auth();
 export default app;
