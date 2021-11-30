@@ -14,16 +14,16 @@ const app = firebase.initializeApp({
     measurementId: "G-84H6LX45WK"
 });
 
-var db = firebase.firestore();
+export var db = firebase.firestore();
 
 export const createUser = async (email, password) => {
     const userAuth = await auth.createUserWithEmailAndPassword(email, password);
     app.firestore().collection('users').doc(userAuth.user.uid).set({
         Email: email,
-        Playlist:[],
-    });
-    
+        LikedSongs:[],
+    });   
 }
+
 
 export const auth = app.auth();
 export default app;

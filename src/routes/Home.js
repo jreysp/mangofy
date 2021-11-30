@@ -8,8 +8,22 @@ import logo from '../mangofy_logo-03.png';
 function Home() {
 
     const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false);
     const { currentUser, logout } = useAuth()
     const navigate = useNavigate()
+    const { createPlaylist } = useAuth();
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+        try {
+            setError("")
+            setLoading(true)
+            await createPlaylist()
+        } catch {
+            setError("Failed to create a playlist")
+        }
+        setLoading(false)
+    }
 
     async function handleLogout() {
         setError("")
@@ -44,6 +58,22 @@ function Home() {
                 </button>
             </div>
             <h1>My Playlists</h1>
+            <div>
+                <button
+                    onClick={handleSubmit}
+                    style={{
+                        paddingLeft: "65px",
+                        paddingRight: "65px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
+                        fontFamily: "Mont Heavy",
+                        color: "white",
+                        backgroundColor: "orange",
+                        marginBottom: "10px",
+                    }} >
+                    Create a new Playlist
+                </button>
+            </div>
             <body>
                 {/*Code for playlists goes here!*/}
             </body>

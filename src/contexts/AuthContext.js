@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { auth, createUser } from '../firebase'
+import { auth, createUser, db } from '../firebase'
 
 const AuthContext = React.createContext()
 
@@ -22,6 +22,12 @@ export function AuthProvider({ children }) {
 
     function logout() {
         return auth.signOut()
+    }
+
+    function createPlaylist() {
+        db.collection('users').doc(currentUser).update({
+            newPlaylist:[]
+        })
     }
 
     useEffect(() => {
