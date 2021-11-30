@@ -3,26 +3,25 @@ import { useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import Playlist from '../playlist';
 
-function LikeButton() {
+function LikeButton(song) {
 
     const [likedSongs, setLikedSongs] = useState();
     
     const {currentUser} = useAuth();
         
-    function likeSong() {
+    function likeSong(song) {
         const playlist = new Playlist();
-        var song = {
-            name: "Happy",
-            artist: "Pharrell Williams"
-        }
         playlist.addSongToPlaylist(currentUser.uid, song);
-        /*playlist.removeSongFromPlaylist(currentUser.uid, song)
-        */
+        return;
+    }
+    function unlikeSong(song){//NOT YET USED
+        const playlist = new Playlist();
+        playlist.removeSongFromPlaylist(currentUser.uid, song);
         return;
     }
 
     return(
-        <button onClick={likeSong}>Like</button>
+        <button onClick={() => {likeSong(song)}}>Like</button>
     )
 }
 

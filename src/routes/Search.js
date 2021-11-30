@@ -79,10 +79,16 @@ function Search() {
     const artist = all_songs.input[i].artist;
     const genre = all_songs.input[i].genre;
 
+    var song_info = {
+      name: name,
+      artist: artist, 
+      genre: genre
+    }
+
       var temp = <div className="song">
         <li className="song_number">{i+1}</li>
         <li className="like_button">
-            <LikeButton/>
+            <LikeButton input = {song_info}/>
             </li>
         <li className="song_name">{name}</li>
         <li className="song_artist">{artist}</li>

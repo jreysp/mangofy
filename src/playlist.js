@@ -32,11 +32,11 @@ export default class Playlist{
         //console.log(getUserPlaylist);
         var ref = dB.collection('users').doc(currentUserID)
         //ref.set(
-        console.log("Adding song", song);
+        //console.log("Adding song", song);
+        
         const unionRes = await ref.update(
         {
             //Playlist: {song}
-            
             Playlist: FieldValue.arrayUnion({song})
         });
     }
