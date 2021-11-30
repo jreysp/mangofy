@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
     function signup(email, password) {
         createUser(email, password)
     }
-
+   
     function logout() {
         return auth.signOut()
     }

@@ -2,6 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
 require('firebase/compat/firestore')
+const fieldValue = firebase.firestore.FieldValue;
 
 const app = firebase.initializeApp({
     apiKey: "AIzaSyBdZ7-9kpNQlwjiHxc1THKSs-tFSdEf_Uo",
@@ -22,8 +23,8 @@ export const createUser = async (email, password) => {
         Email: email,
         Playlist:[],
     });
-    
 }
-
 export const auth = app.auth();
+export const dB = db;
+export const FieldValue= fieldValue;
 export default app;
