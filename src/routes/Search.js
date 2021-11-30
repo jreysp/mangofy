@@ -1,8 +1,22 @@
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react'
 import parseSongs from '../backend/search.js'
+import app from '../firebase.js';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 function Search() {
+  const [songs, setSongs] = useState([]);
+
+  useEffect(() => {
+    app.firestore().collection('songs').get().then((snapshot) => {
+      setSongs(snapshot.docs.map((doc) => doc.data()));
+    });
+
+    app.firestore().collection('songs').onSnapshot((snapshot) => {
+      setSongs(snapshot.docs.map((doc) => doc.data()));
+    });
+  }, []);
 
     const searchStringRef = useRef()
     const [searchString, setSearchString] = useState("")
