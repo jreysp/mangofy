@@ -37,16 +37,16 @@ function Search() {
                 placeholder="Search for songs by title, artist, or genre"
                 className="search-input"
             />
-            <DisplaySongs input = {search(searchString)}/>
+            <DisplaySongs input = {search(searchString, songs)}/>
         </div>
     );
 }
 
-  function search(search_string)
+  function search(search_string, songs)
   {
     const all_songs = new parseSongs();
     //all_songs.printSongs();
-    var cur_song = all_songs.search_songs(search_string);
+    var cur_song = all_songs.search_songs(search_string, songs);
     return cur_song;
   }
   function DisplaySongs(all_songs)//all_songs
