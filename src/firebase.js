@@ -1,6 +1,8 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
+require('firebase/compat/firestore')
+
 const app = firebase.initializeApp({
     apiKey: "AIzaSyBdZ7-9kpNQlwjiHxc1THKSs-tFSdEf_Uo",
     authDomain: "mangofy-88087.firebaseapp.com",
@@ -11,6 +13,8 @@ const app = firebase.initializeApp({
     appId: "1:200816517909:web:1e8f17871bdd0fdff1ff1c",
     measurementId: "G-84H6LX45WK"
 });
+
+var db = firebase.firestore();
 
 export const auth = app.auth();
 export default app;

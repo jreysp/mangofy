@@ -76,7 +76,8 @@ export default class parseSongs
             var found_string = cur_song.genre.toLowerCase().search(genre.toLowerCase());
             if(found_string !== -1
                 && genre !== ""
-                && (found_string === 0 || cur_song.genre[found_string-1] === ' '))
+                && (found_string === 0 || cur_song.genre[found_string-1] === ' '
+                || cur_song.genre[found_string-1] === '/'))
             {
                 //we found the song
                 //display the info ... 

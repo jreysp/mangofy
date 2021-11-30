@@ -2,7 +2,6 @@
 {"list": [
     {"name":"Levitating","artist":"Dua Lipa", "genre": "Pop"},
     {"name":"Alors on Danse","artist":"Stromae", "genre": "Pop"},
-    {"name":"My New Swag(我的新衣）","artist":"VAVA", "genre": "Rap"},
     {"name":"Pretty Please","artist":"Jackson Wang", "genre": "Pop"},
     {"name":"Misery Business","artist":"Paramore", "genre": "Pop"},
     {"name":"DWAY!","artist":"Jackson Wang", "genre": "Pop"},
@@ -15,7 +14,11 @@
     {"name":"Stressed Out","artist":"Twenty One Pilots", "genre": "Pop"},
     {"name":"Centuries","artist":"Fall Out Boy", "genre": "Pop"},
     {"name":"Break Free","artist":"Ariana Grande", "genre": "Pop"},
-
+    {"name":"Single Ladies","artist":"Beyoncé","genre":"Pop"},
+    {"name":"Countdown","artist":"Beyoncé","genre":"Pop"},
+    {"name":"Love on Top","artist":"Beyoncé","genre":"Pop"},
+    {"name":"Formation","artist":"Beyoncé","genre":"Pop"},
+    {"name":"Irreplaceable","artist":"Beyoncé","genre":"Pop"},
     
     {"name":"Traveller","artist":"Wice", "genre": "Electronic"},
     {"name":"Deep Blue","artist":"The Midnight", "genre": "Electronic"},
@@ -29,9 +32,22 @@
     {"name":"Descend","artist":"Dynatron", "genre": "Electronic"},
     {"name":"Moonbeam","artist":"Jordan Maron", "genre": "Electronic"},
 
-    
-    {"name":"Symphony No.5","artist":"Ludwig van Beethoven", "genre": "Classical"},
-    {"name":"Piano Concerto No.21 in C Major","artist":"Wolfgang Amadeus Mozart", "genre": "Classical"},
+    {"name":"Leave the Door Open","artist":"Bruno Mars, Anderson .Paak, Silk Sonic","genre":"R&B"},
+    {"name":"Smokin Out the Window","artist":"Bruno Mars, Anderson .Paak, Silk Sonic","genre":"R&B"},
+    {"name":"Skate","artist":"Bruno Mars, Anderson .Paak, Silk Sonic","genre":"R&B"},
+    {"name":"Put On A Smile","artist":"Bruno Mars, Anderson .Paak, Silk Sonic","genre":"R&B"},
+    {"name":"Save Room For Us","artist":"Tinashe","genre":"R&B"},
+    {"name":"2 On","artist":"Tinashe","genre":"R&B"},
+    {"name":"Bouncin","artist":"Tinashe","genre":"R&B"},
+    {"name":"X","artist":"Tinashe","genre":"R&B"},
+
+    {"name":"My New Swag(我的新衣)","artist":"VAVA", "genre": "Rap"},
+    {"name":"Alright","artist":"Kendrick Lamar","genre":"Rap"},
+    {"name":"Bitch, Don't Kill My Vibe", "artist":"Kendrick Lamar", "genre": "Rap"},
+    {"name":"Money Trees","artist":"Kendrick Lamar","genre":"Rap"},
+    {"name":"Humble","artist":"Kendrick Lamar","genre":"Rap"},
+    {"name":"Lockdown","artist":"Anderson .Paak", "genre": "Rap"},
+
     {"name":"Symphony No.5","artist":"Ludwig van Beethoven", "genre": "Classical"},
     {"name":"Piano Concerto No.21 in C Major","artist":"Wolfgang Amadeus Mozart", "genre": "Classical"},
     {"name":"Gargoyles Op.29","artist":"Lowell Liebermann", "genre": "Classical"},

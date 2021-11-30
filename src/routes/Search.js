@@ -13,7 +13,7 @@ function Search() {
 
     return (
         <div className="search">
-            <h1 className="center">Search</h1>
+            <h1>Search</h1>
             <input
                 id="searchbar"
                 onKeyUp={handleOnChange}
