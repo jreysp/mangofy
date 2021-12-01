@@ -1,15 +1,31 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Alert } from 'react-bootstrap'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js'
 import cover from '../mangofy_playlist-01.png';
 import 'firebase/compat/firestore';
+import app from '../firebase';
 
 function Home() {
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const navigate = useNavigate()
+    const [pic_url, setURL] = useState([]); 
+    
+    useEffect(() => {
+        app.firestore().collection('users').doc(currentUser.uid)
+        .collection('Photo')
+        .get().then((snapshot) => {
+          setURL(snapshot.docs.map((doc) => doc.data()));
+        });
+    
+        app.firestore().collection('users').doc(currentUser.uid)
+        .collection('Photo').onSnapshot((snapshot) => {
+          setURL(snapshot.docs.map((doc) => doc.data()));
+        });
+      }, []);
+      console.log("URL First: ", pic_url);
 
     async function handleLogout() {
         setError("")
@@ -46,6 +62,7 @@ function Home() {
             <div className="col1">
             { error && <Alert variant="danger">{error}</Alert>}
             <h1>Profile</h1>
+            <DisplayPicture input = {pic_url}/>
             <h2>Email</h2> <body>{currentUser.email}</body>
             <div>
                 <button
@@ -102,6 +119,14 @@ function Home() {
         </div>  
     );
 }
+function DisplayPicture(pic_url)
+{
+    var picture = pic_url.input[0].picture_url;
+    console.log("THE REAL URL:", picture);
+    //console.log("RA2:", pic_url.input[0].URL);
+    return (<img src= {picture}/>);
+}
+
 
 
 export default Home;
