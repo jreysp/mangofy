@@ -6,7 +6,6 @@ import { useAuth } from '../contexts/AuthContext.js'
 import logo from '../mangofy_logo-03.png';
 import parseSongs from '../backend/search.js';
 import app from '../firebase.js';
-import DailyMix from '../components/DailyMix.js'
 import 'firebase/compat/firestore';
 
 function Home() {
