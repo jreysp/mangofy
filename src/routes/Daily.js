@@ -39,7 +39,7 @@ function Daily(){
         <div>
         <div>
             <button
-                    onClick={() => randomPlaylist(all_songs, currentUser.uid)}
+                    onClick={() => generateDailyMix(all_songs, currentUser.uid)}
                     className="daily_generate"
                     >
                     Generate Daily Mix
@@ -102,6 +102,11 @@ function DisplaySongs(all_songs)
    }
    return array;
   }
+
+function generateDailyMix(songs, userid) {
+  clear(userid);
+  randomPlaylist(songs, userid);
+}
 
 function randomPlaylist(songs, userid) {
         var random = []; 
