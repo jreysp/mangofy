@@ -7,6 +7,7 @@ function Register() {
 
     const emailRef = useRef();
     const passwordRef = useRef();
+    const photoRef = useRef();
     const { signup } = useAuth();
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false);
@@ -17,11 +18,15 @@ function Register() {
         try {
             setError("")
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
+            await signup(emailRef.current.value, passwordRef.current.value, photoRef.current.value)
         } catch {
             setError("Failed to create an account")
         }
         setLoading(false)
+
+    }
+
+    async function handleChange() {
 
     }
 
@@ -84,6 +89,30 @@ function Register() {
                     marginBottom: "30px"
                 }}  
             />
+            </div>
+
+            <div
+                style={{
+                    paddingRight: "397px"
+                }}
+            >
+                Photo URL
+            </div>
+
+            <div>
+                <input
+                    ref={photoRef}
+                    style={{
+                        paddingLeft: "10px",
+                        paddingRight: "280px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
+                        fontSize: "16px",
+                        fontFamily: "Helmet",
+                        color: "black",
+                        marginBottom: "30px"
+                    }}
+                />
             </div>
 
             {/*Code for the button to create a new account*/}
