@@ -49,7 +49,7 @@ function LikeButton(props) {
         }
 
         const playlist = new Playlist();
-        playlist.addSongToPlaylist2(currentUser.uid, song1);
+        playlist.addSongToPlaylist2(currentUser.uid, song1, 'Playlist');
     }
 
     function removeSong(song) {
