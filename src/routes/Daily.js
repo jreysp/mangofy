@@ -3,6 +3,7 @@ import { useAuth } from '../contexts/AuthContext.js'
 import { useState, useEffect } from 'react'
 import app from '../firebase.js';
 import Playlist from '../playlist.js';
+import { dB } from '../firebase.js'
 
 function Daily(){
     const [songs, setSongs] = useState([]);
@@ -42,9 +43,25 @@ function Daily(){
                         backgroundColor: "orange",
                         marginBottom: "10px",
                     }} >
-                    Random
+                    Generate Daily Mix
                 </button>
-            </div>
+        </div>
+        <div>
+            <button
+                    onClick={() => clear(currentUser.uid)}
+                    style={{
+                        paddingLeft: "65px",
+                        paddingRight: "65px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
+                        fontFamily: "Mont Heavy",
+                        color: "white",
+                        backgroundColor: "orange",
+                        marginBottom: "10px",
+                    }} >
+                    Clear
+                </button>
+        </div>
         <DisplaySongs input = {songs}/>
         </div>
     )
@@ -110,5 +127,14 @@ function randomPlaylist(songs, userid) {
         }
     }
 
+function clear(userid){
+    var ref = dB.collection('users').doc(userid).collection('Daily Mix')
+    
+    ref.get().then((querySnapshot) => {
+        querySnapshot.forEach(doc => {
+            doc.ref.delete()
+        });
+    });
+}
 
 export default Daily;
