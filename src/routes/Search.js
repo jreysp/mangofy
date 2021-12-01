@@ -44,19 +44,11 @@ function Search() {
   function search(search_string, songs)
   {
     const all_songs = new parseSongs();
-    //all_songs.printSongs();
     var cur_song = all_songs.search_songs(search_string, songs);
     return cur_song;
   }
-  function DisplaySongs(all_songs)//all_songs
+  function DisplaySongs(all_songs)
   {
-
-    function likeSong() {
-        return;
-    }
-    //var search_term = document.getElementById('searchbar').value;
-    //var all_songs = search(search_term);
-  
     var array = [];
     var html_obj = <h4>
         <div className="song">
@@ -71,8 +63,7 @@ function Search() {
     if (all_songs.input.length !== 0) {
         array.push(html_obj);
     }
-    //console.log(all_songs);
-    //console.log(all_songs.input.length);
+
    for(var i = 0; i < all_songs.input.length; i++)
    {
     const name = all_songs.input[i].name;
@@ -101,9 +92,5 @@ function Search() {
    }
    return array;
   }
-  
-  
-  //all_songs.search_songs_name("NON-EXISTENT SONG");
-
 
 export default Search;

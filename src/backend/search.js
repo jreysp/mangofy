@@ -14,16 +14,9 @@ export default class parseSongs
                 && name !== ""
                 && (found_string === 0 || cur_song.name[found_string-1] === ' '))
             {
-                //we found the song
-                //display the info ... 
-                //console.log("FOUND THE SONG!");
-                //console.log(cur_song.name);
-                //console.log(cur_song.artist);
-                //console.log(cur_song.genre);
                 songs.push(cur_song);
             }
         }  
-        //console.log("Song not found in database!!");
         return songs;
     }
     search_songs_artist(artist, songlist)
@@ -41,17 +34,10 @@ export default class parseSongs
                 && artist !== ""
                 && (found_string === 0 || cur_song.artist[found_string-1] === ' '))
             {
-                //we found the song
-                //display the info ... 
-                //console.log("FOUND THE SONG!");
-                //console.log(cur_song.name);
-                //console.log(cur_song.artist);
-                //console.log(cur_song.genre);
                 songs.push(cur_song);
             }
         }  
         return songs;
-        //console.log("Song not found in database!!");
     }
     search_songs_genre(genre, songlist)
     {
@@ -69,17 +55,10 @@ export default class parseSongs
                 && (found_string === 0 || cur_song.genre[found_string-1] === ' '
                 || cur_song.genre[found_string-1] === '/'))
             {
-                //we found the song
-                //display the info ... 
-                //console.log("FOUND THE SONG!");
-                //console.log(cur_song.name);
-                //console.log(cur_song.artist);
-                //console.log(cur_song.genre);
                 songs.push(cur_song);
             }
         }  
         return songs;
-        //console.log("Song not found in database!!");
     }
     search_songs(input, songlist)
     {
@@ -95,6 +74,3 @@ export default class parseSongs
     }
     
 }
-
-
-//export default class parseSongs{};

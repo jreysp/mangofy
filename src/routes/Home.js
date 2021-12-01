@@ -22,6 +22,24 @@ function Home() {
         }
     }
 
+    function handlePlaylist(name) {
+        setError("")
+
+        if(name == "my")
+        try {
+            navigate("/myplaylist")
+        } catch {
+            setError("Failed to go to my playlist")
+        }
+
+        if(name == "daily")
+        try {
+            navigate("/daily")
+        } catch {
+            setError("Failed to go to daily playlist")
+        }
+    }
+
     return (
         <div className="home">
             { error && <Alert variant="danger">{error}</Alert>}
@@ -44,11 +62,41 @@ function Home() {
                 </button>
             </div>
             <h1>My Playlists</h1>
-            <body>
-                {/*Code for playlists goes here!*/}
-            </body>
+            <div>
+            <button
+                    onClick={() => handlePlaylist("my")}
+                    style={{
+                        paddingLeft: "65px",
+                        paddingRight: "65px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
+                        fontFamily: "Mont Heavy",
+                        color: "white",
+                        backgroundColor: "orange",
+                        marginBottom: "10px",
+                    }} >
+                    My Playlist
+                </button>
+            </div>
+            <div>
+            <button
+                    onClick={() => handlePlaylist("daily")}
+                    style={{
+                        paddingLeft: "65px",
+                        paddingRight: "65px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
+                        fontFamily: "Mont Heavy",
+                        color: "white",
+                        backgroundColor: "orange",
+                        marginBottom: "10px",
+                    }} >
+                    Daily Playlist
+                </button>
+            </div>
         </div>  
     );
 }
+
 
 export default Home;
