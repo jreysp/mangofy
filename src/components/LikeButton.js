@@ -12,6 +12,7 @@ function LikeButton(song) {
     function likeSong(song) {
         const playlist = new Playlist();
         playlist.addSongToPlaylist(currentUser.uid, song);
+        console.log(playlist.getTotalSongList());
         return;
     }
     function unlikeSong(song){//NOT YET USED

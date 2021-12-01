@@ -3,6 +3,7 @@ import "firebase/compat/auth";
 
 require('firebase/compat/firestore')
 const fieldValue = firebase.firestore.FieldValue;
+const Snapshot = firebase.Snapshot;
 
 const app = firebase.initializeApp({
     apiKey: "AIzaSyBdZ7-9kpNQlwjiHxc1THKSs-tFSdEf_Uo",
@@ -27,4 +28,5 @@ export const createUser = async (email, password) => {
 export const auth = app.auth();
 export const dB = db;
 export const FieldValue= fieldValue;
+export const snapshot = Snapshot;
 export default app;

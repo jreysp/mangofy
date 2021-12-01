@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from './contexts/AuthContext.js'
 import { AuthProvider } from './contexts/AuthContext.js';
-import {dB, FieldValue} from "./firebase.js"
+import {dB, FieldValue, snapshot} from "./firebase.js"
 
 /*function getUserPlaylist(currentUser, song){
     const [userData, setUserData] = useState([]);
@@ -48,6 +48,25 @@ export default class Playlist{
             Playlist: FieldValue.arrayRemove({song})
         });
     }
-    
+    async getTotalSongListPromise()
+    {
+        const ref = await dB.collection('songs');
+        console.log("REF: ", ref.get());
+        const result = ref.get().then((querySnapshot) => {
+            const res = querySnapshot.docs.map((doc) =>{
+                return {id: doc.id, ...doc.data()}
+            })
+            //console.log(res);
+            return res;
+        });
+        
+        //USE THIS LINE OF CODE RIGHT BELOW TO PROCES THE PROMISE THAT IS RETURNED
+        //result.then((result) => {console.log(result)})
+        //the value of result can only be used from inside this line of code
+        
+        return result;
+        
+        //return result.docs.map((doc) => doc.data());
+    }
 }
 
