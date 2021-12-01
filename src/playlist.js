@@ -1,8 +1,4 @@
 
-import { useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from './contexts/AuthContext.js'
-import { AuthProvider } from './contexts/AuthContext.js';
 import {dB, FieldValue, snapshot} from "./firebase.js"
 
 /*function getUserPlaylist(currentUser, song){
@@ -37,15 +33,15 @@ export default class Playlist{
         const unionRes = await ref.update(
         {
             //Playlist: {song}
-            Playlist: FieldValue.arrayUnion({song})
+            Playlist: FieldValue.arrayUnion(song)
         });
     }
     async removeSongFromPlaylist(currentUserID, song){
         var ref = dB.collection('users').doc(currentUserID)
-        console.log("Adding song", song);
+        console.log("Removing song", song);
         const unionRes = await ref.update(
         {
-            Playlist: FieldValue.arrayRemove({song})
+            Playlist: FieldValue.arrayRemove(song)
         });
     }
     async getTotalSongListPromise()
@@ -68,5 +64,28 @@ export default class Playlist{
         
         //return result.docs.map((doc) => doc.data());
     }
+
+    async addSongToPlaylist2(currentUserID, song) {
+        var ref = dB.collection('users').doc(currentUserID).collection('Playlist')
+
+        console.log('Adding song')
+        console.log(song)
+
+        const res = await ref.add(song)
+    }
+
+    async removeSongFromPlaylist2(currentUserID, name) {
+        console.log('Removing song')
+        console.log(name)
+        var ref = dB.collection('users').doc(currentUserID).collection('Playlist')
+
+        const query = ref.where('name', '==', name)
+        query.get().then((querySnapshot) => {
+            querySnapshot.forEach(doc => {
+                doc.ref.delete()
+            });
+        });
+    };
+    
 }
 

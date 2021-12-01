@@ -131,6 +131,33 @@ li a:hover {
 .like_button {
   position: absolute;
   left: 45px; 
+  height: 20px;
+}
+
+.add_button {
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  color: white;
+  font-family: 'Helmet';
+  font-size: 18px;
+}
+
+.add_button:hover {
+  color: black
+}
+
+.remove_button {
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  color: white;
+  font-family: 'Helmet';
+  font-size: 18px;
+}
+
+.remove_button:hover {
+  color: black
 }
 
 .song_number {

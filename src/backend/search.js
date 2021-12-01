@@ -1,10 +1,5 @@
-import React from 'react';
 export default class parseSongs
 {
-    constructor()
-    {
-
-    }
     search_songs_name(name, songlist)
     {
         //searches songs by name 
@@ -21,8 +16,8 @@ export default class parseSongs
             {
                 //we found the song
                 //display the info ... 
-                console.log("FOUND THE SONG!");
-                console.log(cur_song.name);
+                //console.log("FOUND THE SONG!");
+                //console.log(cur_song.name);
                 //console.log(cur_song.artist);
                 //console.log(cur_song.genre);
                 songs.push(cur_song);
