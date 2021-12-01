@@ -40,7 +40,7 @@ function Login() {
             <div className="Username">
             <input
                 id="username" 
-                placeholder= "USERNAME"
+                placeholder= "EMAIL"
                 type='text'
                 ref={emailRef} required
                 style={{

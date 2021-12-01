@@ -79,18 +79,6 @@ function LikeButton(props) {
                 -
         </button>
         </div>
-        /*
-         <input
-            type="checkbox"
-            checked={liked}
-            onChange={(e) => handleChange(e, props.song)}
-        />
-        <button
-            className="like_button"
-            onClick={() => {likeSong(song)}}>
-            Like
-        </button>
-        */
         
     )
     

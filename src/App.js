@@ -22,7 +22,9 @@ function App() {
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/search" element={<PrivateRoute/>}>
+              <Route path="/search" element={<Search/>}/>
+          </Route>
           <Route path="/myplaylist" element={<MyPlaylist />} />
           <Route path="/daily" element={<Daily />} />
         </Routes>

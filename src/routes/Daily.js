@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import app from '../firebase.js';
 import Playlist from '../playlist.js';
 import { dB } from '../firebase.js'
+import LikeButton from '../components/LikeButton.js'
 
 function Daily(){
     const [songs, setSongs] = useState([]);
@@ -12,6 +13,10 @@ function Daily(){
     useEffect(() => {
       app.firestore().collection('users').doc(currentUser.uid).collection('Daily Mix').
       get().then((snapshot) => {
+        setSongs(snapshot.docs.map((doc) => doc.data()));
+      });
+
+      app.firestore().collection('users').doc(currentUser.uid).collection('Daily Mix').onSnapshot((snapshot) => {
         setSongs(snapshot.docs.map((doc) => doc.data()));
       });
 
@@ -28,41 +33,27 @@ function Daily(){
     }, []);
 
     return(
-        <div className="myplaylist">
-        <h1>Daily Playlist</h1>
+        <div className="dailymix">
+        <h1>Daily Mix</h1>
+        <DisplaySongs input = {songs}/>
+        <div>
         <div>
             <button
                     onClick={() => randomPlaylist(all_songs, currentUser.uid)}
-                    style={{
-                        paddingLeft: "65px",
-                        paddingRight: "65px",
-                        paddingTop: "10px",
-                        paddingBottom: "10px",
-                        fontFamily: "Mont Heavy",
-                        color: "white",
-                        backgroundColor: "orange",
-                        marginBottom: "10px",
-                    }} >
+                    className="daily_generate"
+                    >
                     Generate Daily Mix
                 </button>
         </div>
         <div>
             <button
                     onClick={() => clear(currentUser.uid)}
-                    style={{
-                        paddingLeft: "65px",
-                        paddingRight: "65px",
-                        paddingTop: "10px",
-                        paddingBottom: "10px",
-                        fontFamily: "Mont Heavy",
-                        color: "white",
-                        backgroundColor: "orange",
-                        marginBottom: "10px",
-                    }} >
-                    Clear
+                    className="daily_clear"
+                    >
+                    Clear Daily Mix
                 </button>
         </div>
-        <DisplaySongs input = {songs}/>
+        </div>
         </div>
     )
 }
@@ -97,6 +88,11 @@ function DisplaySongs(all_songs)
 
       var temp = <div className="song">
         <li className="song_number">{i+1}</li>
+        <li className="like_button">
+            <LikeButton
+                song={song_info}
+                />
+            </li>
         <li className="song_name">{name}</li>
         <li className="song_artist">{artist}</li>
         <li className="song_genre">{genre}</li>

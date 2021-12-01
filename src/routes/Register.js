@@ -32,16 +32,16 @@ function Register() {
 
     return (
         <div className="register">
-            <h1>Create a Mangofy Account</h1>
+            <h1>Register</h1>
             {error && <Alert variant="danger">{error}</Alert>}
 
             <div
                 style={{
-                    paddingRight: "396px",
+                    paddingRight: "422px",
                     paddingBottom: "5px"
                 }}
             >
-                Username
+                Email
             </div>
 
             {/*Code for inputting a Username*/}
@@ -67,7 +67,8 @@ function Register() {
 
             <div
                 style={{
-                    paddingRight: "397px"
+                    paddingRight: "392px",
+                    paddingBottom: "5px"
                 }}
             >
                 Password
@@ -93,7 +94,8 @@ function Register() {
 
             <div
                 style={{
-                    paddingRight: "397px"
+                    paddingRight: "388px",
+                    paddingBottom: "5px"
                 }}
             >
                 Photo URL
@@ -132,6 +134,7 @@ function Register() {
                 Create Account
             </button>
 
+            <div><Link to="/login">Click Here to Login</Link></div>
         </div>
 
     );

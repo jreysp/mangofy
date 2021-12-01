@@ -20,6 +20,8 @@ function Search() {
 
   }, []);
 
+  console.log(songs)
+
     function handleOnChange() {
         setSearchString(searchStringRef.current.value)
     }
@@ -49,6 +51,9 @@ function Search() {
   }
   function DisplaySongs(all_songs)
   {
+    //var search_term = document.getElementById('searchbar').value;
+    //var all_songs = search(search_term);
+  
     var array = [];
     var html_obj = <h4>
         <div className="song">

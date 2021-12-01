@@ -1,11 +1,9 @@
 import React from 'react'
-import { Button, Alert } from 'react-bootstrap'
-import { useRef, useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Alert } from 'react-bootstrap'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js'
-import logo from '../mangofy_logo-03.png';
-import parseSongs from '../backend/search.js';
-import app from '../firebase.js';
+import cover from '../mangofy_playlist-01.png';
 import 'firebase/compat/firestore';
 
 function Home() {
@@ -44,9 +42,11 @@ function Home() {
 
     return (
         <div className="home">
+            <div className="row">
+            <div className="col1">
             { error && <Alert variant="danger">{error}</Alert>}
             <h1>Profile</h1>
-            <h2>Email:</h2> {currentUser.email}
+            <h2>Email</h2> <body>{currentUser.email}</body>
             <div>
                 <button
                     onClick={handleLogout}
@@ -63,38 +63,41 @@ function Home() {
                     LOGOUT
                 </button>
             </div>
+            </div>
+            <div className="col2">
             <h1>My Playlists</h1>
-            <div>
-            <button
-                    onClick={() => handlePlaylist("my")}
-                    style={{
-                        paddingLeft: "65px",
-                        paddingRight: "65px",
-                        paddingTop: "10px",
-                        paddingBottom: "10px",
-                        fontFamily: "Mont Heavy",
-                        color: "white",
-                        backgroundColor: "orange",
-                        marginBottom: "10px",
-                    }} >
-                    My Playlist
-                </button>
+            <div className ="row">
+            <div className ="centered">
+                <div>
+                    <button
+                            onClick={() => handlePlaylist("my")}
+                            className="playlist_button"
+                            >
+                            My Playlist
+                        </button>
+                </div>
+                <img
+                    src={cover} 
+                    className="playlist-cover"
+                    onClick={() => handlePlaylist("my")}/>
+                
             </div>
             <div>
-            <button
-                    onClick={() => handlePlaylist("daily")}
-                    style={{
-                        paddingLeft: "65px",
-                        paddingRight: "65px",
-                        paddingTop: "10px",
-                        paddingBottom: "10px",
-                        fontFamily: "Mont Heavy",
-                        color: "white",
-                        backgroundColor: "orange",
-                        marginBottom: "10px",
-                    }} >
-                    Daily Playlist
-                </button>
+                <div>
+                    <button
+                            onClick={() => handlePlaylist("daily")}
+                            className="playlist_button" >
+                            Daily Mix
+                        </button>
+                    </div>
+            
+            <img
+                src={cover} 
+                className="playlist-cover"
+                onClick={() => handlePlaylist("daily")}/>
+            </div>
+            </div>
+            </div>
             </div>
         </div>  
     );

@@ -51,6 +51,26 @@ html {
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
 }
 
+.playlist-cover {
+  height: 270px;
+  width: 270px;
+  padding-right: 45px;
+}
+
+.playlist-cover:hover {
+  filter: brightness(90%);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -128,6 +148,20 @@ li a:hover {
   left: 90px;
 }
 
+.playlist_button {
+  border: none;
+  background-color:transparent;
+  overflow: hidden;
+  color: black;
+  font-family: 'Mont Heavy';
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.playlist_button:hover {
+  color: #F15A29
+}
+
 .like_button {
   position: absolute;
   left: 45px; 
@@ -176,11 +210,63 @@ li a:hover {
   right: 30px;
 }
 
+.myplaylist h1 {
+  color: white;
+  padding-left: 30px;
+}
+
+.dailymix h1 {
+  color: white;
+  padding-left: 30px;
+}
+
+.daily_generate {
+  border: none;
+  background-color:transparent;
+  overflow: hidden;
+  color: white;
+  font-family: 'Mont Heavy';
+  font-size: 24px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.daily_generate:hover {
+  color: black;
+}
+
+.daily_clear {
+  border: none;
+  background-color:transparent;
+  overflow: hidden;
+  color: white;
+  font-family: 'Mont Heavy';
+  font-size: 24px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.daily_clear:hover {
+  color: black;
+}
+
 .home {
   padding-top: 10px;
   height: 100%;
   min-height:100vh;
   background-color: white;
+}
+
+.home body {
+  position: relative;
+  bottom: 10px;
+}
+.col1 {
+  padding-left: 30px;
+}
+
+.col2 {
+  padding-left: 60px;
 }
 
 .login {
@@ -199,13 +285,22 @@ li a:hover {
   color: black;
 }
 
+.register a {
+  color: white;
+  font-family: 'Helmet';
+  text-decoration: none;
+}
+
+.register a:hover {
+  color: black;
+}
+
 .register {
   padding-top: 10px;
   text-align:center;
   height: 100%;
   min-height:100vh;
-  background-color: white;
-
+  color: white;
 }
 
 .search {
