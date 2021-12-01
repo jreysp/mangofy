@@ -65,8 +65,8 @@ export default class Playlist{
         //return result.docs.map((doc) => doc.data());
     }
 
-    async addSongToPlaylist2(currentUserID, song) {
-        var ref = dB.collection('users').doc(currentUserID).collection('Playlist')
+    async addSongToPlaylist2(currentUserID, song, playlistName) {
+        var ref = dB.collection('users').doc(currentUserID).collection(playlistName)
 
         console.log('Adding song')
         console.log(song)

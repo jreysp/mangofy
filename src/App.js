@@ -10,13 +10,6 @@ import PrivateRoute from './components/PrivateRoute.js'
 import { AuthProvider } from './contexts/AuthContext'
 import './App.css';
 
-
-//var cur_song = all_songs.search_songs("Classical");
-//var cur_song = all_songs.search_songs_name("Levitating");
-
-console.log("FROM APP.JS");
-//console.log(cur_song);
-
 function App() {
   return (
    <div>

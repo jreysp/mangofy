@@ -5,7 +5,7 @@ import 'firebase/compat/firestore';
 import LikeButton from '../components/LikeButton.js'
 
 function Search() {
-  const [songs, setSongs] = useState([]);
+  const [songs, setSongs] = useState([]); 
   const searchStringRef = useRef()
   const [searchString, setSearchString] = useState("")
 

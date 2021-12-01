@@ -1,12 +1,15 @@
 import React from 'react'
 import { Button, Alert } from 'react-bootstrap'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js'
 import logo from '../mangofy_logo-03.png';
+import parseSongs from '../backend/search.js';
+import app from '../firebase.js';
+import DailyMix from '../components/DailyMix.js'
+import 'firebase/compat/firestore';
 
 function Home() {
-
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const navigate = useNavigate()
