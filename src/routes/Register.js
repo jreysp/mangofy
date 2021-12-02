@@ -19,14 +19,11 @@ function Register() {
             setError("")
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value, photoRef.current.value)
+            navigate("/")
         } catch {
             setError("Failed to create an account")
         }
         setLoading(false)
-
-    }
-
-    async function handleChange() {
 
     }
 

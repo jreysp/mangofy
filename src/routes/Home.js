@@ -16,7 +16,6 @@ function Home() {
     useEffect(() => {
         if (typeof pic_url !== undefined)
         {
-            console.log("hello");
             app.firestore().collection('users').doc(currentUser.uid)
             .collection('Photo')
             .get().then((snapshot) => {
@@ -131,6 +130,6 @@ function DisplayPicture(pic_url)
         picture = pic_url.input[0].picture_url;
     console.log("THE REAL URL:", picture);
     //console.log("RA2:", pic_url.input[0].URL);
-    return (<img src= {picture}/>);
+    return (<img className="profile_picture" src= {picture}/>);
 }
 export default Home;
