@@ -7,6 +7,7 @@ import Search from './routes/Search.js'
 import MyPlaylist from './routes/MyPlaylist.js'
 import Daily from './routes/Daily.js'
 import EditProfile from './routes/EditProfile.js'
+import AddSong from './routes/AddSong.js'
 import PrivateRoute from './components/PrivateRoute.js'
 import { AuthProvider } from './contexts/AuthContext'
 import './App.css';
@@ -29,6 +30,7 @@ function App() {
           <Route path="/myplaylist" element={<MyPlaylist />} />
           <Route path="/daily" element={<Daily />} />
           <Route path="/editprofile" element={<EditProfile />} />
+          <Route path="/addsong" element={<AddSong />} />
         </Routes>
       </AuthProvider>
    </BrowserRouter>
