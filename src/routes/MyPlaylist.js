@@ -29,16 +29,7 @@ function MyPlaylist(){
             <div>
                 <button
                     onClick={() => navigate("/addsong")}
-                    style={{
-                        paddingLeft: "65px",
-                        paddingRight: "65px",
-                        paddingTop: "10px",
-                        paddingBottom: "10px",
-                        fontFamily: "Mont Heavy",
-                        color: "white",
-                        backgroundColor: "orange",
-                        marginBottom: "10px",
-                    }} >
+                    className="daily_generate">
                     Add Song
                 </button>
             </div>
