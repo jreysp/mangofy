@@ -19,7 +19,7 @@ function MyPlaylist(){
       });
 
     }, []);
-
+    
     return(
         <div className="myplaylist">
         <h1>My Playlist</h1>

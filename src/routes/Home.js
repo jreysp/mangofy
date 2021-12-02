@@ -14,16 +14,21 @@ function Home() {
     const [pic_url, setURL] = useState([]); 
     
     useEffect(() => {
-        app.firestore().collection('users').doc(currentUser.uid)
-        .collection('Photo')
-        .get().then((snapshot) => {
-          setURL(snapshot.docs.map((doc) => doc.data()));
-        });
-    
-        app.firestore().collection('users').doc(currentUser.uid)
-        .collection('Photo').onSnapshot((snapshot) => {
-          setURL(snapshot.docs.map((doc) => doc.data()));
-        });
+        if (typeof pic_url !== undefined)
+        {
+            console.log("hello");
+            app.firestore().collection('users').doc(currentUser.uid)
+            .collection('Photo')
+            .get().then((snapshot) => {
+              setURL(snapshot.docs.map((doc) => doc.data()));
+            });
+        
+            app.firestore().collection('users').doc(currentUser.uid)
+            .collection('Photo').onSnapshot((snapshot) => {
+              setURL(snapshot.docs.map((doc) => doc.data()));
+            });
+        }
+       
       }, []);
       console.log("URL First: ", pic_url);
 
@@ -120,13 +125,12 @@ function Home() {
     );
 }
 function DisplayPicture(pic_url)
-{
-    var picture = pic_url.input[0].picture_url;
+{   
+    var picture;
+    if (pic_url.input[0] !== undefined)
+        picture = pic_url.input[0].picture_url;
     console.log("THE REAL URL:", picture);
     //console.log("RA2:", pic_url.input[0].URL);
     return (<img src= {picture}/>);
 }
-
-
-
 export default Home;

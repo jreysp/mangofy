@@ -21,8 +21,18 @@ var db = firebase.firestore();
 export const createUser = async (email, password, photoURL) => {
     const userAuth = await auth.createUserWithEmailAndPassword(email, password);
     app.firestore().collection('users').doc(userAuth.user.uid).set({
-        PhotoURL: photoURL,
+        Email: email
     });
+    var URL_obj = {
+        picture_url: photoURL
+    }
+    console.log("URL_obj", URL_obj);
+    const hello = await app.firestore().collection('users').doc(userAuth.user.uid).collection('Photo').add(URL_obj);
+    /*var ref = dB.collection('users').doc(currentUserID).collection(playlistName)
+
+    console.log('Adding song')
+    console.log(song)
+    const res = await ref.add(song)*/
 }
 export const auth = app.auth();
 export const dB = db;
