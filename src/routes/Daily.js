@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import app from '../firebase.js';
 import Playlist from '../playlist.js';
 import { dB } from '../firebase.js'
-import LikeButton from '../components/LikeButton.js'
+import AddButton from '../components/AddButton.js'
 
 function Daily(){
     const [songs, setSongs] = useState([]);
@@ -89,7 +89,7 @@ function DisplaySongs(all_songs)
       var temp = <div className="song">
         <li className="song_number">{i+1}</li>
         <li className="like_button">
-            <LikeButton
+            <AddButton
                 song={song_info}
                 />
             </li>

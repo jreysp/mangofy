@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import parseSongs from '../backend/search.js'
 import app from '../firebase.js';
 import 'firebase/compat/firestore';
-import LikeButton from '../components/LikeButton.js'
+import AddButton from '../components/AddButton.js'
 
 function Search() {
   const [songs, setSongs] = useState([]); 
@@ -84,7 +84,7 @@ function Search() {
       var temp = <div className="song">
         <li className="song_number">{i+1}</li>
         <li className="like_button">
-            <LikeButton
+            <AddButton
                 song={song_info}
                 />
             </li>

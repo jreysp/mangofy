@@ -2,7 +2,7 @@ import React from 'react'
 import { useAuth } from '../contexts/AuthContext.js'
 import { useState, useEffect } from 'react'
 import app from '../firebase.js';
-import LikeButton from '../components/LikeButton.js'
+import RemoveButton from '../components/RemoveButton.js'
 
 function MyPlaylist(){
     const [songs, setSongs] = useState([]);
@@ -59,7 +59,7 @@ function DisplaySongs(all_songs)
       var temp = <div className="song">
         <li className="song_number">{i+1}</li>
         <li className="like_button">
-            <LikeButton
+            <RemoveButton
                 song={song_info}
                 />
             </li>
