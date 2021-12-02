@@ -21,3 +21,7 @@ In the Search Page, there is an input button where you can search for songs base
 # Changing Your Profile Picture in Mangofy
 
 When you create your account, you can add a profile picture using the image url. If you want to change your profile picture, click on your profile picture in the Home page, which takes you to the Edit Profile page where you can submit a new image url. Click Save Changes to apply the change.
+
+# How to Add Custom Songs to 'My Playlist'
+
+In 'My Playlist' click the 'Add Song' button, this will redirect you to the Add Song page where you can input the title, artist(s), and genre of your desired song. After clicking the 'Submit' button, your custom song will be added to your 'My Playlist' playlist.
