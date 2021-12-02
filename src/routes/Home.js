@@ -125,11 +125,12 @@ function Home() {
 }
 function DisplayPicture(pic_url)
 {   
+    const navigate = useNavigate();
     var picture;
     if (pic_url.input[0] !== undefined)
         picture = pic_url.input[0].picture_url;
     console.log("THE REAL URL:", picture);
     //console.log("RA2:", pic_url.input[0].URL);
-    return (<img className="profile_picture" src= {picture}/>);
+    return (<img className="profile_picture" src= {picture} onClick={() => navigate("/editprofile")}/>);
 }
 export default Home;
