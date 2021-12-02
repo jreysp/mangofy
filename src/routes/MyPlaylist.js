@@ -3,10 +3,12 @@ import { useAuth } from '../contexts/AuthContext.js'
 import { useState, useEffect } from 'react'
 import app from '../firebase.js';
 import RemoveButton from '../components/RemoveButton.js'
+import { useNavigate } from 'react-router-dom';
 
 function MyPlaylist(){
     const [songs, setSongs] = useState([]);
-    const {currentUser} = useAuth();
+    const { currentUser } = useAuth();
+    const navigate = useNavigate();
   
     useEffect(() => {
       app.firestore().collection('users').doc(currentUser.uid).collection('Playlist').
@@ -23,7 +25,23 @@ function MyPlaylist(){
     return(
         <div className="myplaylist">
         <h1>My Playlist</h1>
-        <DisplaySongs input = {songs}/>
+            <DisplaySongs input={songs} />
+            <div>
+                <button
+                    onClick={() => navigate("/addsong")}
+                    style={{
+                        paddingLeft: "65px",
+                        paddingRight: "65px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
+                        fontFamily: "Mont Heavy",
+                        color: "white",
+                        backgroundColor: "orange",
+                        marginBottom: "10px",
+                    }} >
+                    Add Song
+                </button>
+            </div>
         </div>
     )
 }

@@ -29,7 +29,7 @@ function AddSong() {
         const playlist = new Playlist();
         await playlist.addSongToPlaylist2(currentUser.uid, song, 'Playlist');
 
-        navigate("/")
+        navigate("/myplaylist")
     }
 
     return (

@@ -4,8 +4,10 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js'
 import cover from '../mangofy_playlist-01.png';
+import daily_cover from '../mangofy-daily.png';
 import 'firebase/compat/firestore';
 import app from '../firebase';
+import Daily from './Daily.js';
 
 function Home() {
     const [error, setError] = useState("")
@@ -104,22 +106,7 @@ function Home() {
                 
             </div>
 
-            <div>
-                <button
-                    onClick={() => navigate("/addsong")}
-                    style={{
-                        paddingLeft: "65px",
-                        paddingRight: "65px",
-                        paddingTop: "10px",
-                        paddingBottom: "10px",
-                        fontFamily: "Mont Heavy",
-                        color: "white",
-                        backgroundColor: "orange",
-                        marginBottom: "10px",
-                    }} >
-                    Add Song
-                </button>
-            </div>
+            
 
             <div>
                 <div>
@@ -131,7 +118,7 @@ function Home() {
                     </div>
             
             <img
-                src={cover} 
+                src={daily_cover} 
                 className="playlist-cover"
                 onClick={() => handlePlaylist("daily")}/>
             </div>
