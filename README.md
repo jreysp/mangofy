@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Mangofy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Music organization app that allows users to create playlists and discover new music.
 
-## Available Scripts
+# How to Launch Mangofy
 
-In the project directory, you can run:
+Use Visual Studio Code. Clone the Git repository and open it in VSCode. In the terminal, input 'npm start' to see the web app on a browser. If you do not have the necessary packages, run 'npm install' before 'npm start'.
 
-### `npm start`
+# How to Use Mangofy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+When you first launch the app, you will be directed to the login page. If you do not own an account, you will be required to register for one in the Register page. To get to the register page, click the "Click here to Register" link. Once you have an account, you may log into Mangofy through the Login page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# After you Log Into Mangofy
 
-### `npm test`
+After logging into Mangofy, you will see your profile as well as your playlists. Mangofy users have two playlists: 'My Playlist' and 'Daily Mix'. 'My Playlist' contains all the songs that you have added from the Search Page or the 'Daily Mix' playlist. The default 'My Playlist' page will contain no songs. The 'Daily Mix' playlist is a randomly generated playlist consisting of ten songs from the song library. To generate a new 'Daily Mix' playlist, click 'Generate Daily Mix'. To clear the 'Daily Mix' playlist, click 'Clear Daily Mix'. If you want to log out of your account, click the "Logout" button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# How to Search for Songs In Mangofy
 
-### `npm run build`
+In the Search Page, there is an input button where you can search for songs based on their name, artist(s), and genre. Once you have begun searching, songs will be listed on the Search page that are relevant to the input.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Changing Your Profile Picture in Mangofy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When you create your account, you can add a profile picture using the image url. If you want to change your profile picture, click on your profile picture in the Home page, which takes you to the Edit Profile page where you can submit a new image url. Click Save Changes to apply the change.
