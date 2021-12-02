@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js'
 import cover from '../mangofy_playlist-01.png';
+import daily_cover from '../mangofy-daily.png';
 import 'firebase/compat/firestore';
 import app from '../firebase';
 
@@ -113,7 +114,7 @@ function Home() {
                     </div>
             
             <img
-                src={cover} 
+                src={daily_cover} 
                 className="playlist-cover"
                 onClick={() => handlePlaylist("daily")}/>
             </div>
